@@ -1,0 +1,14 @@
+﻿aws : 
+At line:1 char:1
++ aws ec2 terminate-instances --instance-ids i-0e02eef93d9a2fa3c 2>&1 | ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+aws: [ERROR]: An error occurred (UnauthorizedOperation) when calling the TerminateInstances operation: You are not authorized to perform this operation. User: arn:aws:sts::394113606375:assumed-role/OrganizationAccountAccessRole/capstone9-prod-session is not 
+authorized to perform: ec2:TerminateInstances on resource: arn:aws:ec2:us-east-1:394113606375:instance/i-0e02eef93d9a2fa3c with an explicit deny in a service control policy: 
+arn:aws:organizations::264787847442:policy/o-gd4w2ps0uk/service_control_policy/p-wr7d7jri. Encoded authorization failure message: D5kqG_6LFNo9uA2QntNrKXhQhfLLv_ZwgptTSYdXGF2hClzrPbiEemUfpbihTl-C_wCGLUfG6Lre9Wlfjxk4v_Ru-cFUDCMYYUM6PbHawBOepB0fviiDsC8-szsQl5jDYF
+qAZjwJnM8EKEZ51lnWpzsHiaZdTVlPT901lrXh1xiwwMsLyridfAnguDuectHRsM4EGQTxlZLKQoodQZSBuToXh171JslpJuxWiTeESoNvBkIrKT1vL1XYsF3qbUL2S0O3SfcnN9cOv6RhJGHgVS5KCMs9vDuQxDNzK62TS4FdBibLPjHRRrVDWuJI-7JDgetztxccoqQEkOtPpjyqEO2hh1gf2Vu9XDONHoMNiHKSNeoKeRl3nidbV67Cdrgy0W04yb
+Soahb3QHU9LWc_Ofuz-B-nn35Hb5MPipcuoWYLQ7pAzI07d6BiSTLX-ujcXO3kxnvTJ7syvPd5iCjM10t54qyO3ibP4T6WVYsdta_LGfMPDQM9vU9b5BZBy1EIS4eKaUXByhWOF_YxRkxi8vhSUx1mnslXrJjaYck0xRowMXskeQhfGk210TlOqntt2u2VMrokwk0XO7EXg0Ik5PdeQyR5zjjexdbbF9C9MzNtoAwR8RbTW7wAfDhqSuKOepQ8A_Kjyx
+OJiNdXEYdxkL0cutOLhgKb0KOmsRVpJv2ZlkNaEmy33BdCIXvSw52NfaatotnuVeW7XENOuPHk5VRyxYDgkVjA2DMjYMXCzrbfKFp8EFTkPcm22TbkpgkdQnS2pWJpbksHdAdelKRXAveoBTER8NMlksLel__HuQhQwErZ72in4oK7DhiBlbJN-XMtKgQ7LUwIO369WiHjWClPqBxpMYco6fScAwZH4zoXP1iH78UZ2Z55UpfT6aE8i_VYyZZmdHrLuo
+dTOqG1mPyfP7A8K12PFpEcnqCDu63F-DGjU2kL6DyNLT_47KgI-lLJaisFPhUihGOpaoBh1-dVx6w
