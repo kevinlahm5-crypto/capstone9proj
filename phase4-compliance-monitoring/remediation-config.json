@@ -1,0 +1,22 @@
+[
+  {
+    "ConfigRuleName": "capstone9-s3-public-read-check",
+    "TargetType": "SSM_DOCUMENT",
+    "TargetId": "AWS-DisableS3BucketPublicReadWrite",
+    "Automatic": true,
+    "MaximumAutomaticAttempts": 3,
+    "RetryAttemptSeconds": 60,
+    "Parameters": {
+      "AutomationAssumeRole": {
+        "StaticValue": {
+          "Values": ["arn:aws:iam::264787847442:role/capstone9-remediation-role"]
+        }
+      },
+      "S3BucketName": {
+        "ResourceValue": {
+          "Value": "RESOURCE_ID"
+        }
+      }
+    }
+  }
+]

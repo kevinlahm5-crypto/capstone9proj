@@ -1,0 +1,10 @@
+{
+  "ConfigRuleName": "capstone9-s3-encryption-check",
+  "Source": {
+    "Owner": "AWS",
+    "SourceIdentifier": "S3_BUCKET_SERVER_SIDE_ENCRYPTION_ENABLED"
+  },
+  "Scope": {
+    "ComplianceResourceTypes": ["AWS::S3::Bucket"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "capstone9-config-recorder",
+  "roleARN": "arn:aws:iam::264787847442:role/capstone9-config-role",
+  "recordingGroup": {
+    "allSupported": true,
+    "includeGlobalResourceTypes": true
+  }
+}
