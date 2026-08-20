@@ -1,0 +1,7 @@
+[
+  {
+    "Source": "aws.guardduty",
+    "DetailType": "GuardDuty Finding",
+    "Detail": "{\"id\":\"74d35857e1484f7aa95ad2139805ca66\",\"type\":\"Backdoor:EC2/C&CActivity.B!DNS\",\"severity\":8.0,\"resource\":{\"instanceDetails\":{\"instanceId\":\"i-99999999\"}}}"
+  }
+]

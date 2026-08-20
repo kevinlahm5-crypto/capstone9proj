@@ -1,0 +1,35 @@
+{
+  "Comment": "GuardDuty automated incident response: validate, log, and isolate",
+  "StartAt": "ValidateFinding",
+  "States": {
+    "ValidateFinding": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:264787847442:function:capstone9-validate-finding",
+      "Next": "IsHighSeverity"
+    },
+    "IsHighSeverity": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.isValid",
+          "BooleanEquals": true,
+          "Next": "LogFinding"
+        }
+      ],
+      "Default": "NotHighSeverity"
+    },
+    "NotHighSeverity": {
+      "Type": "Succeed"
+    },
+    "LogFinding": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:264787847442:function:capstone9-log-finding",
+      "Next": "IsolateInstance"
+    },
+    "IsolateInstance": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:264787847442:function:capstone9-isolate-instance",
+      "End": true
+    }
+  }
+}

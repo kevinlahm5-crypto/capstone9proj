@@ -1,0 +1,7 @@
+[
+  {
+    "Id": "1",
+    "Arn": "arn:aws:states:us-east-1:264787847442:stateMachine:capstone9-incident-response",
+    "RoleArn": "arn:aws:iam::264787847442:role/capstone9-eventbridge-role"
+  }
+]

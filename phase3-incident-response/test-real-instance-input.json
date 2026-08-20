@@ -1,0 +1,12 @@
+{
+  "detail": {
+    "id": "test-real-instance-001",
+    "type": "Backdoor:EC2/C&CActivity.B!DNS",
+    "severity": 8.0,
+    "resource": {
+      "instanceDetails": {
+        "instanceId": "i-07a3c744a3ff1c224"
+      }
+    }
+  }
+}
