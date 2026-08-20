@@ -1,0 +1,1 @@
+﻿OIDC Provider ARN: arn:aws:iam::264787847442:oidc-provider/token.actions.githubusercontent.com
