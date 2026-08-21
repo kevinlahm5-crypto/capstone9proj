@@ -3,3 +3,10 @@
 __pycache__/
 *.pyc
 .env
+
+# Certs and keys - never commit
+*.pem
+*.key
+*.crt
+*.csr
+*.pfx
