@@ -1,0 +1,27 @@
+[
+  {
+    "ConfigRuleName": "s3-bucket-sse-kms-enabled",
+    "TargetType": "SSM_DOCUMENT",
+    "TargetId": "Capstone9-EnableS3BucketCMKEncryption",
+    "Automatic": true,
+    "MaximumAutomaticAttempts": 5,
+    "RetryAttemptSeconds": 60,
+    "Parameters": {
+      "AutomationAssumeRole": {
+        "StaticValue": {
+          "Values": ["arn:aws:iam::264787847442:role/capstone9-config-role"]
+        }
+      },
+      "BucketName": {
+        "ResourceValue": {
+          "Value": "RESOURCE_ID"
+        }
+      },
+      "KMSKeyId": {
+        "StaticValue": {
+          "Values": ["1376020f-a9a1-4d57-8737-cb8fdce89415"]
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "0.3",
+  "description": "Enable S3 bucket default encryption using a specific customer-managed KMS key",
+  "assumeRole": "{{ AutomationAssumeRole }}",
+  "parameters": {
+    "BucketName": {
+      "type": "String",
+      "description": "The S3 bucket to remediate"
+    },
+    "KMSKeyId": {
+      "type": "String",
+      "description": "The KMS key ID or ARN to use for default encryption"
+    },
+    "AutomationAssumeRole": {
+      "type": "String",
+      "description": "The role ARN for automation to assume"
+    }
+  },
+  "mainSteps": [
+    {
+      "name": "EnableCMKEncryption",
+      "action": "aws:executeAwsApi",
+      "inputs": {
+        "Service": "s3",
+        "Api": "PutBucketEncryption",
+        "Bucket": "{{ BucketName }}",
+        "ServerSideEncryptionConfiguration": {
+          "Rules": [
+            {
+              "ApplyServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "aws:kms",
+                "KMSMasterKeyID": "{{ KMSKeyId }}"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

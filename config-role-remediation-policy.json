@@ -1,0 +1,32 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutEncryptionConfiguration",
+        "s3:GetEncryptionConfiguration",
+        "s3:GetBucketLocation"
+      ],
+      "Resource": "arn:aws:s3:::*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "kms:GenerateDataKey",
+        "kms:Encrypt",
+        "kms:Decrypt",
+        "kms:DescribeKey"
+      ],
+      "Resource": "arn:aws:kms:us-east-1:264787847442:key/1376020f-a9a1-4d57-8737-cb8fdce89415"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ssm:StartAutomationExecution",
+        "ssm:GetAutomationExecution"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
